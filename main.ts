@@ -6,14 +6,10 @@ namespace dht11 {
    * Call `dht11.hasStaleData()` to check if the data is stale.
    * This method can be called safely even if the sensor is not available.
    * 
-   * Example:
-   * ```blocks
-   * const temperature = dht11.readTemperature(DigitalPin.P0);
-   * ```
    * @param pin The pin to read the temperature from
    * @returns 
    */
-  //% block="Read DHT11 temperature"
+  //% block="Read DHT11 temperature from $pin"
   //% blockId="read_temperature"
   //% shim=dht11::read_temperature
   export function readTemperature(pin: DigitalPin): number {
@@ -26,14 +22,10 @@ namespace dht11 {
    * Call `dht11.hasStaleData()` to check if the data is stale.
    * This method can be called safely even if the sensor is not available.
    * 
-   * Example:
-   * ```blocks
-   * const humidity = dht11.readHumidity(DigitalPin.P0);
-   * ```
    * @param pin The pin to read the humidity from
    * @returns The humidity in %
    */
-  //% block="Read DHT11 humidity"
+  //% block="Read DHT11 humidity from $pin"
   //% blockId="read_humidity"
   //% shim=dht11::read_humidity
   export function readHumidity(pin: DigitalPin): number {
