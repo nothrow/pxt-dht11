@@ -1,6 +1,5 @@
 #include "pxt.h"
 #include "nrf_gpio.h"
-#include "us_ticker_api.h"
 
 // do not allow polling more often than 2 seconds
 #define DHT11_MIN_POLL_INTERVAL 2000
@@ -40,10 +39,10 @@ namespace dht11 {
     return last_poll_time_ + DHT11_MIN_POLL_INTERVAL < uBit.systemTime();
   }
 
-  // Simple busy-loop delay functions using us_ticker
+  // Simple busy-loop delay function using system timer
   static void busy_loop_us(uint32_t us) {
-    uint32_t start = us_ticker_read();
-    while ((us_ticker_read() - start) < us);
+    uint64_t start = system_timer_current_time_us();
+    while ((system_timer_current_time_us() - start) < us);
   }
 
   static void poll(int pin_number) {
@@ -66,9 +65,9 @@ namespace dht11 {
       return;
     }
 
-    uint32_t readStartTime = us_ticker_read();
-#define _CHECK_TIMEOUT() do { if (us_ticker_read() - readStartTime > POLL_TIMEOUT * 1000) { return; } } while (0)
-#define _CHECK_TIMEOUT_IRQ() do { if (us_ticker_read() - readStartTime > POLL_TIMEOUT * 1000) { __enable_irq(); return; } } while (0)
+    uint64_t readStartTime = system_timer_current_time_us();
+#define _CHECK_TIMEOUT() do { if (system_timer_current_time_us() - readStartTime > POLL_TIMEOUT * 1000) { return; } } while (0)
+#define _CHECK_TIMEOUT_IRQ() do { if (system_timer_current_time_us() - readStartTime > POLL_TIMEOUT * 1000) { __enable_irq(); return; } } while (0)
 
     // wait for sensor to pull the pin down (response start)
     while (nrf_gpio_pin_read(pin_number) == 1) {
