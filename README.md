@@ -43,7 +43,7 @@ For more control, you can check if data is stale or valid:
 
 ```typescript
 if (dht11.hasStaleData()) {
-    basic.showString("Data needs refresh")
+    basic.showString("Data will refresh on next read* call!")
 }
 
 if (dht11.hasValidData()) {
@@ -65,7 +65,6 @@ This design choice makes the library safer and easier to use, but means you cann
 1. Connect DHT11 VCC to 3.3V
 2. Connect DHT11 GND to GND
 3. Connect DHT11 DATA to any digital pin (e.g., P0)
-4. Use a 10kΩ pull-up resistor between DATA and VCC (some DHT11 modules have this built-in)
 
 ## API Reference
 

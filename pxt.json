@@ -12,6 +12,9 @@
         "main.ts",
         "dht.cpp"
     ],
+    "testFiles": [
+        "test.ts"
+    ],
     "public": true,
     "supportedTargets": [
         "microbit"
