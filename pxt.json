@@ -10,8 +10,7 @@
     "files": [
         "README.md",
         "main.ts",
-        "dht.cpp",
-        "test.ts"
+        "dht.cpp"
     ],
     "public": true,
     "supportedTargets": [
