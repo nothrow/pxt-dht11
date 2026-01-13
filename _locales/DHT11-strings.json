@@ -1,0 +1,8 @@
+{
+  "dht11.hasStaleData|block": "Has stale data",
+  "dht11.hasValidData|block": "Has valid data",
+  "dht11.readHumidity|block": "Read DHT11 humidity from $pin",
+  "dht11.readTemperature|block": "Read DHT11 temperature from $pin",
+  "dht11|block": "DHT11",
+  "{id:category}Dht11": "Dht11"
+}

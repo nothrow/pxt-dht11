@@ -1,0 +1,8 @@
+{
+  "dht11.hasStaleData|block": "Má zastaralá data",
+  "dht11.hasValidData|block": "Senzor odpovídá",
+  "dht11.readHumidity|block": "Přečti vlhkost z $pinu",
+  "dht11.readTemperature|block": "Přečti teplotu z $pinu",
+  "dht11|block": "DHT11",
+  "{id:category}Dht11": "Dht11"
+}

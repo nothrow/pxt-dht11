@@ -1,0 +1,6 @@
+{
+  "dht11.hasStaleData": "Vrací true, pokud jsou data ze senzoru DHT11 zastaralá.\nData jsou zastaralá, pokud nebyla načtena nová alespoň 2 sekundy.",
+  "dht11.hasValidData": "Vrací true, pokud senzor DHT11 alespoň jednou načetl platná data.",
+  "dht11.readHumidity": "Vrací vlhkost ze senzoru DHT11. Vrací 0, pokud senzor není dostupný.\nVrátí buď uloženou hodnotu, nebo vyčte data ze senzoru, pokud jsou zastaralá.\nZavolejte `dht11.hasStaleData()` pro kontrolu, zda jsou data zastaralá.\nTuto metodu lze bezpečně volat i pokud senzor není dostupný.\n* @param pin Pin, ze kterého se má číst vlhkost\n@returns Vlhkost v %",
+  "dht11.readTemperature": "Vrací teplotu ze senzoru DHT11. Vrací 0, pokud senzor není dostupný.\nVrátí buď uloženou hodnotu, nebo vyčte data ze senzoru, pokud jsou zastaralá.\nZavolejte `dht11.hasStaleData()` pro kontrolu, zda jsou data zastaralá.\nTuto metodu lze bezpečně volat i pokud senzor není dostupný.\n* @param pin Pin, ze kterého se má číst teplota\n@returns Teplota v °C"
+}

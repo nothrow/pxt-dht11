@@ -1,0 +1,6 @@
+{
+  "dht11.hasStaleData": "Returns true if the data from the DHT11 sensor is stale.\nThe data is stale if it has not been polled for at least 2 seconds.\n@returns True if the data is stale, false otherwise",
+  "dht11.hasValidData": "Returns true if the data from the DHT11 sensor is valid -> means that some data has been read from the sensor.",
+  "dht11.readHumidity": "Returns humidity from the DHT11 sensor. Returns 0 if the sensor is not available.\nWill either return cached value or poll the sensor if the data is stale.\nCall `dht11.hasStaleData()` to check if the data is stale.\nThis method can be called safely even if the sensor is not available.\n* @param pin The pin to read the humidity from\n@returns The humidity in %",
+  "dht11.readTemperature": "Returns temperature from the DHT11 sensor. Returns 0 if the sensor is not available.\nWill either return cached value or poll the sensor if the data is stale.\nCall `dht11.hasStaleData()` to check if the data is stale.\nThis method can be called safely even if the sensor is not available.\n* @param pin The pin to read the temperature from\n@returns"
+}
