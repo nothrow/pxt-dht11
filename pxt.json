@@ -1,6 +1,6 @@
 {
     "name": "DHT11",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "DHT11 library for BBC micro:bit (PXT)",
     "license": "MIT",
     "dependencies": {
